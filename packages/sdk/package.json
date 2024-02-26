@@ -1,5 +1,5 @@
 {
-  "name": "@vue-storefront/integration-boilerplate-sdk",
+  "name": "@oceanapplications/crm-sdk",
   "version": "0.1.0",
   "main": "lib/index.cjs.js",
   "module": "lib/index.es.js",

@@ -1,5 +1,5 @@
 {
-  "name": "@vue-storefront/integration-boilerplate-api",
+  "name": "@oceanapplications/crm-api",
   "version": "0.1.0",
   "sideEffects": false,
   "server": "server/index.js",

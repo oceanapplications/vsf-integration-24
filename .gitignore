@@ -22,3 +22,5 @@ coverage
 playground/app/*
 
 .DS_Store
+
+.npmrc
