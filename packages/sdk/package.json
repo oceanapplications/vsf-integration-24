@@ -1,6 +1,6 @@
 {
   "name": "@oceanapplications/crm-sdk",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "lib/index.cjs.js",
   "module": "lib/index.es.js",
   "types": "lib/index.d.ts",
@@ -28,5 +28,9 @@
     "msw": "^0.47.3",
     "nock": "^13.2.9",
     "rollup-plugin-typescript2": "^0.34.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:oceanapplications/vsf-integration-24.git"
   }
 }
