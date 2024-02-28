@@ -9,8 +9,7 @@ export interface Endpoints {
    * Here you can find an example endpoint definition. Based on this example, you should define how your endpoint will look like.
    * This description will appear in the API extractor, so try to document all endpoints added here.
    */
-  exampleEndpoint(
-    context: BoilerplateIntegrationContext,
-    params: TODO
-  ): Promise<TODO>;
+    exampleEndpoint( context: BoilerplateIntegrationContext, params: TODO ): Promise<TODO>;
+    getProduct(context: BoilerplateIntegrationContext, params: TODO): Promise<TODO>;
+    getOrder(context: BoilerplateIntegrationContext, params: TODO): Promise<TODO>;
 }

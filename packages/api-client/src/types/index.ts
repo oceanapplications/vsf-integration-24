@@ -14,6 +14,10 @@ export type ContextualizedEndpoints = {
 
 export type TODO = any;
 
+export type ID = {
+  id: number
+}
+
 export * from './api';
 export * from './config';
 export * from './context';
