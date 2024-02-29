@@ -2,7 +2,10 @@ module.exports = {
   integrations: {
     boilerplate: {
       location: '@vue-storefront/integration-boilerplate-api/server',
-      configuration: {},
+      configuration: {
+        baseUrl: 'http://crm.test/api/v1/',
+        apiKey: "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYzM2N2Y4YTAxYzgwMTFjZjk1MWZlYjU4ZDIxN2ViNmQ2NGMwYmNkN2Y5ZTY1NjE3NDI3MmQ3MjlkMTlkNWU4Nzc1YjFmMmI0Y2E1Y2QxNTIiLCJpYXQiOjE3MDkxNjQ4NjIuMDY1NzA5LCJuYmYiOjE3MDkxNjQ4NjIuMDY1NzEyLCJleHAiOjE3NDA3ODcyNjIuMDQwNTc4LCJzdWIiOiI3Iiwic2NvcGVzIjpbXX0.IdDwKDJfsX4exq2Sv-KvBqOwgSi6LueFQdnfubYME6Q7fVCl3FV6h_KUbDBHp9eNiWdgiJ3P4uKxopW4z3TeWIRqmpw2yzHIWSKi7Tb2aGjznfZlWtCdyxEbULPkzGmYVcSQcdAaHqJ6w8WkonbAfK9JRH43W2Fgg2kXhvyrwzmMqZkqRG2EAVwiiC57jYxMnHsGpyVsCzOHTd625XuWxzMQ59JpQ6KS242liWUp7lvfjIiZu4rM_zuoXpMNSDHxkpk67n9fc-3JvrUzn1SBGNKD8fKki0US-J7YZsSbymwKkn5PvfGF-402J33BxMW12z4pcF4gxVtfXMGs6GZSpQdKYPtx-rsuLGVWGo_zRO-zYQT0Sj20Jr-vj4pznB76KrP3F6P1rb3u4u8gXrkLs9fMe0OgF9GU4xUd97FoqXbD1W49foL8n0ddn6VNpoi4t3HoA-WsBO7_WCuF704bFKGZwIfXyOIikE2VtWyD3ogRkk2nQ1sH9k_7ffqfeJxXyRWHc9um4GDB4jVCCkUOc6uvUPGszBvSA_DMH2kGfHvglhARxrfksu0y8f1_KqpfGkkFxODQc53Rys7vDF8_RfElgEKV0Zd-qAH78YSiwUjEcFsF-e9-6WrY1dyRX0iaWtkDMY1O5aZxxk2cEifojGT8CS79seUj5To-A8khN-4"
+      },
     },
   },
 };

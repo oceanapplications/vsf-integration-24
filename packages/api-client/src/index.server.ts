@@ -13,7 +13,13 @@ const buildClient = () => {
 }
 
 const onCreate = (settings: MiddlewareConfig) => {
-  const client = buildClient();
+  const client = axios.create({
+    baseURL: settings.baseUrl,
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ` + settings.apiKey
+    }
+  });
 
   return {
     config: settings,

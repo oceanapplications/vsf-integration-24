@@ -3,4 +3,6 @@
  */
 export interface MiddlewareConfig {
   // Add the fields provided in the `middleware.config.js` file.
+  baseUrl: string,
+  apiKey: string,
 }

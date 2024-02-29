@@ -90,3 +90,10 @@ yarn test
 
 7.  That's it. Now you can start the developing your contribution,
 8.  Enjoy.
+
+
+## Publishing
+
+```
+lerna publish --registry=https://npm.pkg.github.com/ --force-publish
+```

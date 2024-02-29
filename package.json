@@ -6,7 +6,8 @@
     "vsf": "node vsf.mjs",
     "build": "lerna run build",
     "build:cli": "cd cli && yarn build",
-    "dev": "concurrently --names \"Frontend,Middleware\" \"npm run dev:app\" \"npm run dev:middleware\"",
+    "build:api-server": "cd packages/api-client npm run build",
+    "dev": "npm run build:api-server && concurrently --names \"Frontend,Middleware\" \"npm run dev:app\" \"npm run dev:middleware\"",
     "dev:app": "cd playground/app && npm run dev",
     "dev:middleware": "cd playground/middleware && npm run dev",
     "test": "lerna run test"
