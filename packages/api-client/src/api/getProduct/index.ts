@@ -1,14 +1,14 @@
-import { Endpoints } from '../../types';
+import { Endpoints, ID, TODO } from '../../types';
 
 export const getProduct: Endpoints['getProduct'] = async (
   context,
-  params
+  params: TODO
 ) => {
   console.log('getProduct has been called');
+  console.dir(params);
+  const data = await context.client.get('products/' + params.id);
 
-  const data = await context.client.get('products');
-
-  return(data.data);
+  return(data.data.data);
 
   return {
       id: 1,

@@ -1,4 +1,4 @@
-import { BoilerplateIntegrationContext, TODO } from '..'
+import { BoilerplateIntegrationContext, TODO, ID } from '..'
 
 /**
  * Definition of all API-client methods available in {@link https://docs.vuestorefront.io/v2/advanced/context.html#context-api | context}.

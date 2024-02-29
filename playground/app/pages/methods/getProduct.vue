@@ -34,7 +34,7 @@ import "vue3-json-viewer/dist/index.css";
 const res = useState('waiting to call getProduct() ...');
 
 async function callEndpoint() {
-  const data = await sdk.boilerplate.getProduct('test');
+  const data = await sdk.boilerplate.getProduct({id: '1'});
   res.value = data
 }
 
