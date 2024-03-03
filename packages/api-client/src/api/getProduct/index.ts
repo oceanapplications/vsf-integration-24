@@ -5,38 +5,53 @@ export const getProduct: Endpoints['getProduct'] = async (
   params: TODO
 ) => {
   console.log('getProduct has been called');
-  console.dir(params);
   const data = await context.client.get('products/' + params.id);
 
-  return(data.data.data);
-
   return {
-      id: 1,
-      sku: 'BPE',
-      name: "Best product Ever",
-      slug: "best-product-ever",
-      description: "Really should buy this",
+      id: data.data.data.id,
+      sku: data.data.data.sku,
+      name: data.data.data.name,
+      slug: data.data.data.name.replace(/\s+/g, '-').toLowerCase() + '-' + data.data.data.id,
+      description: data.data.data.description,
       price: {
         isDiscounted: false,
         regularPrice: {
           currency: "USD",
-          amount: 99.99,
+          amount: data.data.data.price,
           precision: 2
         },
         value: {
           currency: "USD",
-          amount: 99.99,
+          amount: data.data.data.price,
           precision: 2
         },
       },
-      primaryImage: "url",
-      gallery: [],
+      primaryImage: getPrimaryImage(data.data.data),
+      gallery: getGallery(data.data.data),
       rating: {
         average: 5,
         count: 99,
       },
       //variants: SfProductVariant[];
       //attributes: SfAttribute[];
-      quantityLimit: 5,
+      quantityLimit: null,
     };
 };
+
+function getPrimaryImage(data) {
+  return {
+    image: data.gallery[0]?.url ?? null,
+    alt:  data.gallery[0]?.alt ?? null,
+  };
+}
+
+function getGallery(data) {
+  let result = [];
+  data.gallery.forEach(d => {
+    result.push({
+      image: d.url,
+      alt: d?.alt ?? null,
+    })
+  })
+  return result;
+}
