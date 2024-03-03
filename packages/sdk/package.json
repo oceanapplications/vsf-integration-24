@@ -1,6 +1,6 @@
 {
   "name": "@oceanapplications/crm-sdk",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "main": "lib/index.cjs.js",
   "module": "lib/index.es.js",
   "types": "lib/index.d.ts",
