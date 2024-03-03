@@ -11,12 +11,12 @@ function crmProductToSFProduct(data): SfProduct {
       isDiscounted: false,
       regularPrice: {
         currency: "USD",
-        amount: data.price,
+        amount: parseFloat(data.price),
         precisionAmount: "2"
       },
       value: {
         currency: "USD",
-        amount: data.price,
+        amount: parseFloat(data.price),
         precisionAmount: "2"
       },
     },
