@@ -1,6 +1,6 @@
 {
   "name": "@oceanapplications/crm-sdk",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "main": "lib/index.cjs.js",
   "module": "lib/index.es.js",
   "types": "lib/index.d.ts",
@@ -33,5 +33,5 @@
     "type": "git",
     "url": "git@github.com:oceanapplications/vsf-integration-24.git"
   },
-  "gitHead": "efb4d7e25de317dc796277e6a57b6f7a12795e4c"
+  "gitHead": "b117635fa4d53b00ed49377ccaa60213b5a665d9"
 }
