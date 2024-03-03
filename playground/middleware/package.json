@@ -1,7 +1,7 @@
 {
   "name": "@vue-storefront/integration-boilerplate-playground",
   "private": true,
-  "version": "1.0.12",
+  "version": "1.0.13",
   "engines": {
     "node": ">=16.x"
   },
