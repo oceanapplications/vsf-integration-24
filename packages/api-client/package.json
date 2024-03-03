@@ -1,6 +1,6 @@
 {
   "name": "@oceanapplications/crm-api",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "sideEffects": false,
   "server": "server/index.js",
   "main": "lib/index.cjs.js",
