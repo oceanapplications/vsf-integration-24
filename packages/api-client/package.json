@@ -1,6 +1,6 @@
 {
   "name": "@oceanapplications/crm-api",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "sideEffects": false,
   "server": "server/index.js",
   "main": "lib/index.cjs.js",
@@ -31,5 +31,6 @@
   "files": [
     "lib/**/*",
     "server/**/*"
-  ]
+  ],
+  "gitHead": "efb4d7e25de317dc796277e6a57b6f7a12795e4c"
 }
