@@ -11,7 +11,7 @@ export const getProducts: Endpoints['getProducts'] = async (
   let output: GetProducts = {
     products: crmToProducts(response.data.data),
     pagination: crmToPagination(response.data.meta),
-    facets: null,
+    facets: [],
     subCategories: null,
     categoryHierarchy: null,
     currentCategory: null,
