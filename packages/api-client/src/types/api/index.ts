@@ -385,9 +385,14 @@ type GetProductsArgs = {
   ids?: string[];
   skus?: string[];
 };
-type GetProducts = (args: GetProductsArgs) => Promise<{
+type GetProducts = {
   products: SfProductCatalogItem[];
-}>;
+  pagination: SfPagination;
+  facets: SfFacet[];
+  currentCategory: Maybe<SfCategory>;
+  subCategories: SfCategory[];
+  categoryHierarchy: SfCategory[];
+};
 type GetProductDetailsArgs = {
   id: SfId;
   sku?: string;
