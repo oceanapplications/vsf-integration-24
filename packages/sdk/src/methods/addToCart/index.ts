@@ -14,6 +14,7 @@ import { SfCartLineItem, SfMoney, SfProduct, TODO } from '../../types';
  * @param product
  * Just like our API methods, our SDK connector methods accept a single props parameter which carries relevant sub-properties. Therefore, there isn’t much to be described within that TSDoc section.
  *
+ * @param quantity
  * @returns
  * Human-friendly information what the SDK methods returns.
  *
