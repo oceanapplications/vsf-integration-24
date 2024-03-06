@@ -1,5 +1,5 @@
 import { client } from '../../client';
-import { SfCart, SfCartLineItem, SfMoney, TODO } from '../../types';
+import { SfCart, SfCartLineItem, SfMoney } from '../../types';
 
 /**
  * Method summary - General information about the SDK method, usually a single sentence.
@@ -20,8 +20,10 @@ import { SfCart, SfCartLineItem, SfMoney, TODO } from '../../types';
  * @example
  * A short code snippet showing how to use the method. Usually we have more than one @example. We should strive for adding as many examples as possible here, with multiple param configurations.
  */
-export async function getCart(props: TODO): Promise<SfCart> {
-  let items = JSON.parse(localStorage.getItem('line-items') || '[]');
+export async function getCart(): Promise<SfCart> {
+  const lineItemsCookie = useCookie<SfCartLineItem[]>('line-items');
+
+  let items = lineItemsCookie.value;
   let data: SfCart = {
     appliedCoupons: [],
     billingAddress: null,

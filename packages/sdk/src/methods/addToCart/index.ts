@@ -1,6 +1,7 @@
 import { client } from '../../client';
 import { SfCartLineItem, SfMoney, SfProduct, TODO } from '../../types';
 
+
 /**
  * Method summary - General information about the SDK method, usually a single sentence.
  *
@@ -23,6 +24,8 @@ import { SfCartLineItem, SfMoney, SfProduct, TODO } from '../../types';
  */
 export async function addToCart(product: SfProduct, quantity: number) {
 
+  const lineItemsCookie = useCookie<SfCartLineItem[]>('line-items');
+
   let lineItems: SfCartLineItem[] = [];
 // create sfCart line item from props
   const totalPrice: SfMoney = {
@@ -43,17 +46,20 @@ export async function addToCart(product: SfProduct, quantity: number) {
   }
 
   //  add quantity from old items and new
-  const oldItems = localStorage.getItem('line-items');
-  if (oldItems == null) {
+  if ( typeof lineItemsCookie.value == "undefined") { // if nothing has been added yet
     lineItems.push(newLineItem);
   } else {
-    lineItems = JSON.parse(oldItems);
+    lineItems = lineItemsCookie.value;
     const oldItemIndex = lineItems.findIndex((lineItem) => lineItem.slug == product.slug)
-    if (oldItemIndex != -1) {
+    if (oldItemIndex != -1) { // if it's a quantity change
       lineItems[oldItemIndex].quantity += quantity;
+      //recalculate total price
+      lineItems[oldItemIndex].totalPrice.amount = lineItems[oldItemIndex].quantity * lineItems[oldItemIndex].unitPrice.value.amount;
+    } else { // add additional items
+      lineItems.push(newLineItem);
     }
   }
 
-  localStorage.setItem('line-items',  JSON.stringify(lineItems));
+  lineItemsCookie.value = lineItems;
   return lineItems;
 }

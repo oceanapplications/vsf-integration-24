@@ -35,6 +35,8 @@ const res = useState('waiting to call addToCart() ...');
 
 async function callEndpoint() {
   let product = {"id":'1',"sku":"MW-MiracleWatt","name":"MiracleWatt","slug":"miraclewatt-1","description":null,"price":{"isDiscounted":false,"regularPrice":{"currency":"USD","amount":59,"precisionAmount":"2"},"value":{"currency":"USD","amount":59,"precisionAmount":"2"}},"primaryImage":{"url":"http://crm.test/storage/5X4LSFmCIP75FFtjiIGimAaYEuag7LNHqSsfUX6L.png","alt":null},"gallery":[{"url":"http://crm.test/storage/5X4LSFmCIP75FFtjiIGimAaYEuag7LNHqSsfUX6L.png","alt":null}],"rating":{"average":5,"count":99},"variants":[],"attributes":[],"quantityLimit":null}
+  let product2 = {"id":'2',"sku":"MW-MiracleWatt","name":"MiracleWatt","slug":"miraclewatt-2","description":null,"price":{"isDiscounted":false,"regularPrice":{"currency":"USD","amount":49,"precisionAmount":"2"},"value":{"currency":"USD","amount":49,"precisionAmount":"2"}},"primaryImage":{"url":"http://crm.test/storage/5X4LSFmCIP75FFtjiIGimAaYEuag7LNHqSsfUX6L.png","alt":null},"gallery":[{"url":"http://crm.test/storage/5X4LSFmCIP75FFtjiIGimAaYEuag7LNHqSsfUX6L.png","alt":null}],"rating":{"average":5,"count":99},"variants":[],"attributes":[],"quantityLimit":null}
+  await sdk.boilerplate.addToCart(product2, 3);
   const data = await sdk.boilerplate.addToCart(product, 4);
   res.value = data
 }
