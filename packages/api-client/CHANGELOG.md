@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.20](https://github.com/oceanapplications/vsf-integration-24/compare/v1.0.19...v1.0.20) (2024-03-06)
+
+**Note:** Version bump only for package @oceanapplications/crm-api
+
+
+
+
+
 ## [1.0.19](https://github.com/oceanapplications/vsf-integration-24/compare/v1.0.18...v1.0.19) (2024-03-04)
 
 **Note:** Version bump only for package @oceanapplications/crm-api
